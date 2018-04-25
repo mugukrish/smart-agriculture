@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="en-US" class="no-js" >
+	<head>
+	    <meta charset="UTF-8">
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"> 
+	    <title>predicting...</title>
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2.3\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2.3\/svg\/","svgExt":".svg","source":{"concatemoji":"http:\/\/wp.regaltheme.com\/raknew\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.8.4"}};
+			!function(a,b,c){function d(a){var b,c,d,e,f=String.fromCharCode;if(!k||!k.fillText)return!1;switch(k.clearRect(0,0,j.width,j.height),k.textBaseline="top",k.font="600 32px Arial",a){case"flag":return k.fillText(f(55356,56826,55356,56819),0,0),b=j.toDataURL(),k.clearRect(0,0,j.width,j.height),k.fillText(f(55356,56826,8203,55356,56819),0,0),c=j.toDataURL(),b!==c&&(k.clearRect(0,0,j.width,j.height),k.fillText(f(55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447),0,0),b=j.toDataURL(),k.clearRect(0,0,j.width,j.height),k.fillText(f(55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447),0,0),c=j.toDataURL(),b!==c);case"emoji4":return k.fillText(f(55358,56794,8205,9794,65039),0,0),d=j.toDataURL(),k.clearRect(0,0,j.width,j.height),k.fillText(f(55358,56794,8203,9794,65039),0,0),e=j.toDataURL(),d!==e}return!1}function e(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var f,g,h,i,j=b.createElement("canvas"),k=j.getContext&&j.getContext("2d");for(i=Array("flag","emoji4"),c.supports={everything:!0,everythingExceptFlag:!0},h=0;h<i.length;h++)c.supports[i[h]]=d(i[h]),c.supports.everything=c.supports.everything&&c.supports[i[h]],"flag"!==i[h]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[i[h]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(g=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",g,!1),a.addEventListener("load",g,!1)):(a.attachEvent("onload",g),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),f=c.source||{},f.concatemoji?e(f.concatemoji):f.wpemoji&&f.twemoji&&(e(f.twemoji),e(f.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+
+<style>
+.button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+</style>
+
+<link rel='stylesheet' id='contact-form-7-css'  href='wp-content/plugins/contact-form-7/includes/css/styles.css?ver=4.9.1' type='text/css' media='all' />
+<link rel='stylesheet' id='raknew-theme-iconic-font-css'  href='wp-content/themes/raknew/assets/css/material-design-iconic-font.min.css?ver=1.0.0' type='text/css' media='all' />
+<link rel='stylesheet' id='raknew-theme-icon-fonts-pack-css'  href='wp-content/themes/raknew/assets/css/icon-fonts-pack.css?ver=1.0.0' type='text/css' media='all' />
+<link rel='stylesheet' id='raknew-theme-plugins-css'  href='wp-content/themes/raknew/assets/css/plugins.css?ver=1.0.0' type='text/css' media='all' />
+<link rel='stylesheet' id='raknew-theme-colors-css'  href='wp-content/themes/raknew/assets/css/colors.css?ver=1.0.0' type='text/css' media='all' />
+<link rel='stylesheet' id='raknew-theme-main-style-css'  href='wp-content/themes/raknew/assets/css/style.css?ver=1.0.0' type='text/css' media='all' />
+<link rel='stylesheet' id='raknew-theme-responsive-css'  href='wp-content/themes/raknew/assets/css/responsive.css?ver=1.0.0' type='text/css' media='all' />
+<link rel='stylesheet' id='raknew-theme-style-css'  href='wp-content/themes/raknew/style.css?ver=4.8.4' type='text/css' media='all' />
+<style id='raknew-theme-style-inline-css' type='text/css'>
+    ::-moz-selection,::selection,.custom-input button.button-aylen{background:#5b974e}.theme-bg,.double-line,.double-line:after,.slick-slider .prev:hover,.slick-slider .next:hover,.header-style-one .top-contact li.appo-btn,.header-style-one .mainmenu .navigation li a:hover,.welcome-one .horizontal-line,.vertical-line div.middle,.blog-image .icon a:hover,.latest-news .slick-slider .next:hover,.latest-news .slick-slider .prev:hover,.footer-area .social-icon li a:after,.about-garden-list:after,.about-garden-list:before,.tag-btn a:hover,.comment-area .custom-input .btn,.contact-box .custom-input .btn,.contact_form label.error,#scrollUp,hr.line{background:#5b974e}a:focus,a:hover,.theme-color,.slick-slider .prev,.slick-slider .next,.single-choose .single-list:hover h4,.project-menu ul li:hover,.project-menu ul li.active,.gallery-one .single-project a,.project-one .single-project a,.testimonial-one .content i,.blog-text .comments a:hover,.blog-text .title-description h3 a:hover,.footer-bottom .left p a,.top-contact.right li i,.top-contact.right span a:hover,.blog-details-area .blog-date a:hover,.comment-box .text span a:hover,.info-box ul li a:hover,.social-icon li a:hover{color:#5b974e}.mainmenu .navigation > li > ul > li{border-top:1px solid #5b974e}.mainmenu .navigation > li > ul > li:hover > a,.single-list:hover .icon{background-color:#5b974e;}.is-sticky .mainmenu .navigation > li > ul{border:1px dashed #5b974e;}.arrow-box:after,.single-list:hover .icon,.tag-btn a:hover{border-color:#5b974e;}.header-style-one .mainmenu .dropdown li{border-top:1px solid #5b974e;}.is-sticky .mainmenu .navigation > li > ul,.top-contact.right li i,.testimonial-two .single-slide .content{border:1px solid #5b974e;}.border-shape:before{border-left:60px solid #5b974e; -webkit-box-shadow:-5px 0 0 -1px #5b974e; box-shadow:-5px 0 0 -1px #5b974e;}.border-shape-right:after{border-right:60px solid #5b974e; -webkit-box-shadow:5px 0 0 -1px #5b974e; box-shadow:5px 0 0 -1px #5b974e;}.contact_form label.error:after{border-color:#5b974e;}.about-garden-list{border-left:2px solid #5b974e;}.single-about-list > img,.testimonial-two .heading .img{border:2px solid #5b974e;}.btn:hover{background-color:#3c7b2e;}.header-style-one .header-top li.appo-btn a:hover{background:#3c7b2e;}.header-style-two .header-top .right a:hover,.slider-one .slide-text .btn{background:#3c7b2e;}#scrollUp:hover,.style-aylen:after{background:#3c7b2e;}.bx-wrapper .bx-controls-direction a{background:rgba(55,131,38,0.4);}.trapezoid{border-bottom:426px solid rgba(55,131,38,0.79);}.camera_next > span:hover:after,.camera_prev > span:hover:after{background:rgba(55,131,38,0.79);}.gradient-overlay-2:after{background:-webkit-linear-gradient(rgba(36,49,65,0.8), rgba(55,131,38,0.8));    background:-webkit-linear-gradient( rgba(36,49,65,0.8), rgba(55,131,38,0.8)); background:-webkit-gradient( linear, left top, left bottom, from(rgba(36,49,65,0.8)), to(rgba(55,131,38,0.8))); background:-o-linear-gradient( rgba(36,49,65,0.8), rgba(55,131,38,0.8)); background:linear-gradient( rgba(36,49,65,0.8);}.gradient-overlay-3:after{background:-webkit-linear-gradient(rgba(36,49,65,0.9), rgba(55,131,38,0.9));    background:-webkit-linear-gradient( rgba(36,49,65,0.9), rgba(55,131,38,0.9)); background:-webkit-gradient( linear, left top, left bottom, from(rgba(36,49,65,0.9)), to(rgba(55,131,38,0.9))); background:-o-linear-gradient( rgba(36,49,65,0.9), rgba(55,131,38,0.9)); background:linear-gradient( rgba(36,49,65,0.9);}.gradient-overlay-4:after{background:-webkit-linear-gradient(rgba(36,49,65,0.9), rgba(55,131,38,0.9));    background:-webkit-linear-gradient( rgba(36,49,65,0.9), rgba(55,131,38,0.8)); background:-webkit-gradient( linear, left top, left bottom, from(rgba(36,49,65,0.9)), to(rgba(55,131,38,0.8))); background:-o-linear-gradient( rgba(36,49,65,0.9), rgba(55,131,38,0.8)); background:linear-gradient( rgba(36,49,65,0.9);}.overlay-1:after{background:rgba(55,131,38,0.95);}.overlay-2:after{background:rgba(55,131,38,0.7);}.overlay-3:after{background:rgba(36,49,65,0.95);}.overlay-4:after{background:rgba(36,49,65,0.9);}.overlay-5:after{background:rgba(36,49,65,0.8);}.service-two .slick-current .single-slide .text{background:rgba(55,131,38,0.95);}.project-two .single-project .title{background:rgba(55,131,38,0.95);}.project-two .title .zoom-icon a:hover{background:#5b974e }.service-page .single-item:hover .text{background:rgba(55,131,38,0.95);}.comment-area .custom-input button:hover,.contact-page .custom-input .btn:hover{background:#3c7b2e;}
+
+</style>
+<style id='raknew-theme-custom-google-font-inline-css' type='text/css'>
+	body { 
+		font-family: Poppins;font-size: 14px;line-height: 24px;color: #767676;	}
+		h1 { 
+		font-family: Montserrat;font-size: 40px;color: #4c4c4c;	}
+		h2 { 
+		font-family: Montserrat;font-size: 30px;color: #484848;	}
+		h3 { 
+		font-family: Montserrat;font-size: 24px;color: #4c4c4c;	}
+		h4 { 
+		font-family: Montserrat;font-size: 18px;color: #4c4c4c;	}
+		h5 { 
+		font-family: Montserrat;font-size: 16px;color: #4c4c4c;	}
+		h6 { 
+		font-family: Montserrat;font-size: 15px;color: #4c4c4c;	}
+	
+</style>
+<link rel='stylesheet' id='fw-ext-breadcrumbs-add-css-css'  href='wp-content/plugins/unyson/framework/extensions/breadcrumbs/static/css/style.css?ver=4.8.4' type='text/css' media='all' />
+<link rel='stylesheet' id='fw-ext-builder-frontend-grid-css'  href='wp-content/plugins/unyson/framework/extensions/builder/static/css/frontend-grid.css?ver=1.2.10' type='text/css' media='all' />
+<link rel='stylesheet' id='fw-ext-forms-default-styles-css'  href='wp-content/plugins/unyson/framework/extensions/forms/static/css/frontend.css?ver=2.7.10' type='text/css' media='all' />
+<link rel='stylesheet' id='meks-flickr-widget-css'  href='wp-content/plugins/meks-simple-flickr-widget/css/style.css?ver=1.1.3' type='text/css' media='all' />
+<link rel='stylesheet' id='fw-shortcode-section-background-video-css'  href='wp-content/plugins/unyson/framework/extensions/shortcodes/shortcodes/section/static/css/background.css?ver=4.8.4' type='text/css' media='all' />
+<link rel='stylesheet' id='fw-shortcode-section-css'  href='wp-content/plugins/unyson/framework/extensions/shortcodes/shortcodes/section/static/css/styles.css?ver=4.8.4' type='text/css' media='all' />
+<script type='text/javascript' src='wp-includes/js/jquery/jquery.js?ver=1.12.4'></script>
+<script type='text/javascript' src='wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1'></script>
+<script type='text/javascript' src='wp-content/themes/raknew/assets/js/vendor/modernizr-2.8.3.min.js?ver=2.8.3'></script>
+
+<meta name="generator" content="WordPress 4.8.4" />
+<link rel="alternate" type="application/json+oembed" href="wp-json/oembed/1.0/embed?url=http%3A%2F%2Fwp.regaltheme.com%2Fraknew%2Fservices%2F" />
+<link rel="alternate" type="text/xml+oembed" href="wp-json/oembed/1.0/embed?url=http%3A%2F%2Fwp.regaltheme.com%2Fraknew%2Fservices%2F&#038;format=xml" />
+<link rel="shortcut icon" href="//wp.regaltheme.com/raknew/wp-content/uploads/2017/09/favicon.ico" />
+	<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+			</head>
+
+	<body class="page-template-default page page-id-154 light" style="">
+		
+	    <!--[if lt IE 8]>
+	            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please upgrade your browser</a> to improve your experience.</p>
+	        <![endif]-->
+	    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+	    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+	    <!--[if lt IE 9]>
+	          <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+	          <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+	        <![endif]-->
+
+			<!-- loading bar start -->
+		<div id="loading">
+		    <div id="loading-center">
+		        <div id="loading-center-absolute">
+		            <div class="object">
+		                <img src="wp-content/uploads/2017/09/preloader.gif" alt="RakNew">
+		            </div>
+		        </div>
+		    </div>
+		</div>
+		<!-- loading bar end -->
+	
+	    <!-- main-wrapper area start -->
+	    <div class="main-wrapper wrapper-wide">
+					        <!-- header section start -->
+	          <header class="header-style-one">
+	    
+	            <div class="header-bottom sticky-active bg-color-2">
+	                <div class="container">
+	                    <div class="row">
+	                        <div class="col-xs-12">
+	                            <div class="left floatleft">
+	                                <nav class="mainmenu">
+	                                    <div class="navbar-header pull-right">
+	                                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+	                                            <span class="icon-bar"></span>
+	                                            <span class="icon-bar"></span>
+	                                            <span class="icon-bar"></span>
+	                                        </button>
+	                                    </div>
+	                                    <div class="navbar-collapse collapse clearfix">
+	                                        <ul id="menu-main-menu" class="navigation menu-hover-1 clearfix"><li id="menu-item-160" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-29 current_page_item current-menu-ancestor current-menu-parent current_page_parent current_page_ancestor menu-item-has-children menu-item-160"><a href="index.html">HOME</a>
+
+</li>
+<li id="menu-item-161" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-161"><a href="aboutus.html">ABOUT US</a></li><!--
+<li id="menu-item-184" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-184"><a href="#gallery-full-width\index.html">GALLERY</a>
+-->
+</li>
+<li id="menu-item-162" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-162"><a href="instruction.html">INSTRUCTIONS</a></li>
+<li id="menu-item-163" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-163"><a href="contact.html">CONTACT</a></li>
+
+</ul>	                                    </div>
+	                                </nav>
+	                            </div>
+	                         <!--   <div class="right floatright header-social-customize">
+	                            	            <div class="social-icon">
+                <ul class="clearfix">
+                                                    <li><a target="_blank" href="#"><i class="fa fa-facebook-f"></i></a></li>
+                                                        <li><a target="_blank" href="#"><i class="fa fa-google-plus"></i></a></li>
+                                                        <li><a target="_blank" href="#"><i class="fa fa-pinterest-p"></i></a></li>
+                                                        <li><a target="_blank" href="#"><i class="entypo entypo-instagrem"></i></a></li>
+                                        </ul>
+            </div>
+        	                            </div>-->
+	                        </div>
+	                    </div>
+	                </div>
+	            </div>
+	        </header>
+	<div class="page-content">
+		<div class="page-builder-content"><div class="fw-page-builder-content"><div class="fw-main-row "  >
+	<div class="fw-container-fluidpd-zero">
+		<div class="fw-row">
+	<div class="fw-col-xs-12">
+	
+<!-- pages header start -->
+<div class="pages-header pt-180 pb-95 overlay gradient-overlay-2" style="background: rgba(0, 0, 0, 0)  repeat scroll center bottom/cover;">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 text-center">
+                <div class="page-title">
+                    <h1 class="font-36 weight-bold montserrat uppercase white-color mb-20">Forecasting</h1>
+                    <div class="text-center">
+                        <div class="p-vertical-line mb-10">
+                            <div class="v-line"></div>
+                            <div class="v-line animated"></div>
+                            <div class="v-line"></div>
+                        </div>
+                    </div>
+
+                    
+	<!--<div class="breadcrumbs">
+									<span class="first-item">
+									<a href="">Homepage</a></span>
+								<span class="separator"><i class="zmdi zmdi-chevron-right"></i></span>
+												<span class="last-item">Forecasting</span>
+						</div>-->
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- pages header end --></div>
+</div>
+
+<div class="fw-row">
+	<div class="fw-col-xs-12">
+		<!-- service section start 	<section class="service-area service-page service-two section-padding white-bg">
+	    <div class="container">
+	        <div class="row">
+	        	            <div id="move-secion-3">
+						                <div class="col-xs-12 col-sm-6 col-md-4 mb-30 wow fadeInUpSmall" data-wow-delay=".3s" data-wow-duration="1s">
+	                    <div class="single-item relative">
+
+	                        	                        	<img src="//wp.regaltheme.com/raknew/wp-content/uploads/2017/08/1-4.jpg" alt="Rush Removal" />
+		                    
+	                        <div class="text text-center plr-20">
+	                            <div class="d-table">
+	                                <div class="d-tablecell">
+
+	                                                	                        	<img src="wp-content/uploads/2017/08/3-3.pn	g" alt="Rush Removal" />
+            		                    										
+														                           <h3 class="white-color mb-15 montserrat weight-regular">
+				                            	Rush Removal				                            </h3>
+		                        												
+					                    					                        <p class="weight-light line-height-26 white-color">
+												But I must explain to you how all this mistaken idea of denouncing pleasure andraising pain was born and I will give you 					                        </p>
+					                    					                    
+	                                </div>
+	                            </div>
+	                        </div>
+	                    </div>
+	                </div>
+	                	                <div class="col-xs-12 col-sm-6 col-md-4 mb-30 wow fadeInUpSmall" data-wow-delay=".6s" data-wow-duration="1s">
+	                    <div class="single-item relative">
+
+	                        	                        	<img src="//wp.regaltheme.com/raknew/wp-content/uploads/2017/08/3-3.jpg" alt="Watering Garden" />
+		                    
+	                        <div class="text text-center plr-20">
+	                            <div class="d-table">
+	                                <div class="d-tablecell">
+
+	                                                	                        	<img src="//wp.regaltheme.com/raknew/wp-content/uploads/2017/08/4-1.png" alt="Watering Garden" />
+            		                    										
+														                           <h3 class="white-color mb-15 montserrat weight-regular">
+				                            	Watering Garden				                            </h3>
+		                        												
+					                    					                        <p class="weight-light line-height-26 white-color">
+												But I must explain to you how all this mistaken idea of denouncing pleasure andraising pain was born and I will give you 					                        </p>
+					                    					                    
+	                                </div>
+	                            </div>
+	                        </div>
+	                    </div>
+	                </div>
+	                	                <div class="col-xs-12 col-sm-6 col-md-4 mb-30 wow fadeInUpSmall" data-wow-delay=".9s" data-wow-duration="1s">
+	                    <div class="single-item relative">
+
+	                        	                        	<img src="//wp.regaltheme.com/raknew/wp-content/uploads/2017/08/1-4.jpg" alt="Planting Tree" />
+		                    
+	                        <div class="text text-center plr-20">
+	                            <div class="d-table">
+	                                <div class="d-tablecell">
+
+	                                                	                        	<img src="//wp.regaltheme.com/raknew/wp-content/uploads/2017/08/2-2.png" alt="Planting Tree" />
+            		                    										
+														                           <h3 class="white-color mb-15 montserrat weight-regular">
+				                            	Planting Tree				                            </h3>
+		                        												
+					                    					                        <p class="weight-light line-height-26 white-color">
+												But I must explain to you how all this mistaken idea of denouncing pleasure andraising pain was born and I will give you 					                        </p>
+					                    					                    
+	                                </div>
+	                            </div>
+	                        </div>
+	                    </div>
+	                </div>
+	                
+	            </div>
+	           	            <div id="move-secion-6">
+						                <div class="col-xs-12 col-sm-6 col-md-4 mb-30 wow fadeInUpSmall" data-wow-delay=".3s" data-wow-duration="1s">
+	                    <div class="single-item relative">
+
+	                        	                        	<img src="//wp.regaltheme.com/raknew/wp-content/uploads/2017/08/2-4.jpg" alt="Tree Cleaning" />
+		                    
+	                        <div class="text text-center plr-20">
+	                            <div class="d-table">
+	                                <div class="d-tablecell">
+
+	                                                	                        	<img src="//wp.regaltheme.com/raknew/wp-content/uploads/2017/08/2-2.png" alt="Tree Cleaning" />
+            		                    										
+														                           <h3 class="white-color mb-15 montserrat weight-regular">
+				                            	Tree Cleaning				                            </h3>
+		                        												
+					                    					                        <p class="weight-light line-height-26 white-color">
+												But I must explain to you how all this mistaken idea of denouncing pleasure andraising pain was born and I will give you 					                        </p>
+					                    					                    
+	                                </div>
+	                            </div>
+	                        </div>
+	                    </div>
+	                </div>
+	                	                <div class="col-xs-12 col-sm-6 col-md-4 mb-30 wow fadeInUpSmall" data-wow-delay=".6s" data-wow-duration="1s">
+	                    <div class="single-item relative">
+
+	                        	                        	<img src="//wp.regaltheme.com/raknew/wp-content/uploads/2017/08/3-3.jpg" alt="Watering Garden" />
+		                    
+	                        <div class="text text-center plr-20">
+	                            <div class="d-table">
+	                                <div class="d-tablecell">
+
+	                                                	                        	<img src="//wp.regaltheme.com/raknew/wp-content/uploads/2017/08/4-1.png" alt="Watering Garden" />
+            		                    										
+														                           <h3 class="white-color mb-15 montserrat weight-regular">
+				                            	Watering Garden				                            </h3>
+		                        												
+					                    					                        <p class="weight-light line-height-26 white-color">
+												But I must explain to you how all this mistaken idea of denouncing pleasure andraising pain was born and I will give you 					                        </p>
+					                    					                    
+	                                </div>
+	                            </div>
+	                        </div>
+	                    </div>
+	                </div>
+	                	                <div class="col-xs-12 col-sm-6 col-md-4 mb-30 wow fadeInUpSmall" data-wow-delay=".9s" data-wow-duration="1s">
+	                    <div class="single-item relative">
+
+	                        	                        	<img src="//wp.regaltheme.com/raknew/wp-content/uploads/2017/08/1-4.jpg" alt="Rush Removal" />
+		                    
+	                        <div class="text text-center plr-20">
+	                            <div class="d-table">
+	                                <div class="d-tablecell">
+
+	                                                	                        	<img src="//wp.regaltheme.com/raknew/wp-content/uploads/2017/08/1-3.png" alt="Rush Removal" />
+            		                    										
+														                           <h3 class="white-color mb-15 montserrat weight-regular">
+				                            	Rush Removal				                            </h3>
+		                        												
+					                    					                        <p class="weight-light line-height-26 white-color">
+												But I must explain to you how all this mistaken idea of denouncing pleasure andraising pain was born and I will give you 					                        </p>
+					                    					                    
+	                                </div>
+	                            </div>
+	                        </div>
+	                    </div>
+	                </div>
+	                
+	            </div>
+	           
+	        	        </div>
+	    </div>
+	</section>
+	<!-- service section end -
+</div>
+</div>
+
+<div class="fw-row">
+	<div class="fw-col-xs-12">
+	
+<!-- promo section start ng overlay gradient-overlay-3" style="background: rgba(0, 0, 0, 0) url(//wp.regaltheme.com/raknew/wp-content/uploads/2017/08/2-2.jpg) repeat scroll center center/cover;" >
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="promo-title">
+					                    <h1 class="floatleft white-color no-margin">
+                    	Need Help For Gardening? <span class="weight-regular">Please Contact Us</span>                    </h1>
+                	
+					                    <div class="floatright">
+                        <a class="btn white-color button-aylen style-aylen black-white" href="#">
+                        	CONTACT US                        </a>
+                    </div>
+                	                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- promo section end --></div>
+</div>
+
+<div class="fw-row">
+	<div class="fw-col-xs-12">
+	<!-- team section start -->
+<div class="team-area team-one white-bg section-padding">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-9 col-md-7 col-text-center text-center">
+                <div class="section-title mb-70">
+
+                                            <h2 class="font-36 uppercase montserrat weight-bold mb-20">
+                            Prediction                       </h2>
+                    
+                    <div class="double-line"></div>
+
+                                         <p class="font-16 mt-20">
+                        Thus  the weather is forcasted for agriculture purpose
+						</p>
+                                    </div>
+            </div>
+        </div>
+        <div class="row mb-50 text-center">
+
+                                       <div class="col-xs-12 col-sm-6 col-md-3 mobile-mb-30 tablet-mb-30 wow fadeInUpSmall" data-wow-delay=".1s" data-wow-duration="1s"> 
+                                        <div class="single-member relative">
+
+                                            <img src="wp-content/uploads/2017/08/1-5-263x342.jpg" alt="MARK JENSEN" />
+                    
+                    <div class="text-parent">
+                        <div class="text theme-bg">
+                            
+                                                            <h4 class="uppercase mb-5">Rainy</h4>
+                            
+                                                            <h6 class="font-12 montserrat weight-regular uppercase no-margin">Rainy</h6>
+                                                        
+                                                            <div class="social-icon l-height-1">
+                                    <ul class="clearfix">
+                                                                                    <li>
+                                                <a href="#" target="_blank">
+                                                    <i class=""></i>predicted                                                </a>
+                                            </li>
+                                                 
+                                                                            </ul>
+                                </div>
+                                                    </div>
+                    </div>
+                </div>
+            </div>
+
+                                       <div class="col-xs-12 col-sm-6 col-md-3 mobile-mb-30 tablet-mb-30 wow fadeInUpSmall" data-wow-delay=".3s" data-wow-duration="1s"> 
+                                        <div class="single-member relative">
+
+                                            <img src="wp-content/uploads/2017/08/1-5-263x342.jpg" alt="HAROLD SMITH" />
+                    
+                    <div class="text-parent">
+                        <div class="text theme-bg">
+                            
+                                                            <h4 class="uppercase mb-5">sunny</h4>
+                            
+                                                            <h6 class="font-12 montserrat weight-regular uppercase no-margin">sunny</h6>
+                                                        
+                                                            <div class="social-icon l-height-1">
+                                      <ul class="clearfix">
+                                                                                    <li>
+                                                <a href="#" target="_blank">
+                                                    <i class=""></i>predicted                                                </a>
+                                            </li>
+                                                 
+                                                                            </ul>
+                                </div>
+                                                    </div>
+                    </div>
+                </div>
+            </div>
+
+                                       <div class="col-xs-12 col-sm-6 col-md-3 mobile-mb-30 wow fadeInUpSmall" data-wow-delay=".6s" data-wow-duration="1s">
+                                        <div class="single-member relative">
+
+                                            <img src="wp-content/uploads/2017/08/1-5-263x342.jpg" alt="MAX KUHN" />
+                    
+                    <div class="text-parent">
+                        <div class="text theme-bg">
+                            
+                                                            <h4 class="uppercase mb-5">cloud</h4>
+                            
+                                                            <h6 class="font-12 montserrat weight-regular uppercase no-margin">cloud</h6>
+                                                        
+                                                            <div class="social-icon l-height-1">
+                                      <ul class="clearfix">
+                                                                                    <li>
+                                                <a href="#" target="_blank">
+                                                    <i class=""></i>predicted                                                </a>
+                                            </li>
+                                                 
+                                                                            </ul>
+                                </div>
+                                                    </div>
+                    </div>
+                </div>
+            </div>
+
+                                       <div class="col-xs-12 col-sm-6 col-md-3 wow fadeInUpSmall" data-wow-delay=".9s" data-wow-duration="1s">
+                                        <div class="single-member relative">
+
+                                            <img src="wp-content/uploads/2017/08/1-5-263x342.jpg" alt="MAX KUHN" />
+                    
+                    <div class="text-parent">
+                        <div class="text theme-bg">
+                            
+                                                            <h4 class="uppercase mb-5">hot</h4>
+                            
+                                                            <h6 class="font-12 montserrat weight-regular uppercase no-margin">hot</h6>
+                                                        
+                                                            <div class="social-icon l-height-1">
+                                    <ul class="clearfix">
+                                                                                    <li>
+                                                <a href="#" target="_blank">
+                                                    <i class=""></i>predicted                                                </a>
+                                            </li>
+                                                 
+                                                                            </ul>
+                                </div>
+                                                    </div>
+                    </div>
+                </div>
+				
+            </div>
+			<br><br><br><br><br><br><br><br><br><br><br><br>
+			<div class="row" >
+			 <h2  style="padding:50px;" class="font-36 uppercase montserrat weight-bold mb-20"  style="text-align:center;">
+                                    CHECK OUT<br> <span class="theme-color">SUGGESTED CROPS FOR AGRICULTURE</span>                            </h2>
+			<a href="#" class="button">CLICK HERE</a>
+</div>
+
+                    </div>
+    </div>
+</div>
+
+<!-- team section end --></div>
+</div>
+
+	</div>
+</div>
+</div>
+</div>  	</div>
+    <!-- footer section start -->
+   
+    <footer class="footer-one footer-area">
+              
+        <hr class="horizontal-line">
+        <div class="footer-bottom ptb-15 bg-color-2" style="background: #243141 none repeat scroll 0 0;">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <div class="left floatleft">
+                            <p class="copyright">Copyright &copy; 2018 </p>
+                        </div>
+                        <div class="right floatright">
+                        	                        		<ul class="clearfix right-mene-footer">
+                        			                        				<li>
+                                            <a href="#" target="_blank">Terms of service</a>
+
+                                                                                            <span>|</span>
+                                            
+                                        </li>
+                        			                        				<li>
+                                            <a href="#" target="_blank">Privacy policy</a>
+
+                                            
+                                        </li>
+                        			                        		</ul>
+                        	                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- footer section end -->
+
+    </div>
+    <!-- main-wrapper area end-->
+		
+		<!-- All JS Here -->
+		<script type='text/javascript'>
+/* <![CDATA[ */
+var wpcf7 = {"apiSettings":{"root":"http:\/\/wp.regaltheme.com\/raknew\/wp-json\/contact-form-7\/v1","namespace":"contact-form-7\/v1"},"recaptcha":{"messages":{"empty":"Please verify that you are not a robot."}}};
+/* ]]> */
+</script>
+<script type='text/javascript' src='wp-content/plugins/contact-form-7/includes/js/scripts.js?ver=4.9.1'></script>
+<script type='text/javascript' src='wp-content/themes/raknew/assets/js/bootstrap.min.js?ver=4.8.4'></script>
+<script type='text/javascript' src='wp-content/themes/raknew/assets/js/jquery.sticky.js?ver=4.8.4'></script>
+<script type='text/javascript' src='wp-content/themes/raknew/assets/js/jquery.fancybox.pack.js?ver=4.8.4'></script>
+<script type='text/javascript' src='wp-content/themes/raknew/assets/js/jquery.easing.1.3.js?ver=4.8.4'></script>
+<script type='text/javascript' src='wp-content/themes/raknew/assets/js/jquery.bxslider.min.js?ver=4.8.4'></script>
+<script type='text/javascript' src='wp-content/themes/raknew/assets/js/isotope.pkgd.js?ver=4.8.4'></script>
+<script type='text/javascript' src='wp-content/themes/raknew/assets/js/jquery.fitvids.js?ver=4.8.4'></script>
+<script type='text/javascript' src='wp-content/themes/raknew/assets/js/plugins.js?ver=4.8.4'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var raknew = {"theme_uri":"http:\/\/wp.regaltheme.com\/raknew\/wp-content\/themes\/raknew","ajaxurl":"http:\/\/wp.regaltheme.com\/raknew\/wp-admin\/admin-ajax.php","check_rtl":""};
+/* ]]> */
+</script>
+<script type='text/javascript' src='wp-content/themes/raknew/assets/js/main.js?ver=4.8.4'></script>
+<script type='text/javascript' src='wp-content/plugins/unyson/framework/extensions/shortcodes/shortcodes/section/static/js/core.js?ver=4.8.4'></script>
+<script type='text/javascript' src='wp-content/plugins/unyson/framework/extensions/shortcodes/shortcodes/section/static/js/transition.js?ver=4.8.4'></script>
+<script type='text/javascript' src='wp-content/plugins/unyson/framework/extensions/shortcodes/shortcodes/section/static/js/background.js?ver=4.8.4'></script>
+<script type='text/javascript' src='wp-content/plugins/unyson/framework/extensions/shortcodes/shortcodes/section/static/js/background.init.js?ver=4.8.4'></script>
+<script type='text/javascript' src='wp-includes/js/wp-embed.min.js?ver=4.8.4'></script>
+    </body>
+</html>

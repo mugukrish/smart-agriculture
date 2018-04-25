@@ -1,0 +1,257 @@
+
+
+/* 
+ ============= Color 1 5b974e =============
+ */
+::-moz-selection,
+::selection,
+.custom-input button.button-aylen {
+    background: #5b974e;
+}
+
+.theme-bg,
+.double-line,
+.double-line:after,
+.slick-slider .prev:hover,
+.slick-slider .next:hover,
+.header-style-one .top-contact li.appo-btn,
+.header-style-one .mainmenu .navigation li a:hover,
+.welcome-one .horizontal-line,
+.vertical-line div.middle,
+.blog-image .icon a:hover,
+.latest-news .slick-slider .next:hover,
+.latest-news .slick-slider .prev:hover,
+.footer-area .social-icon li a:after,
+.about-garden-list:after,
+.about-garden-list:before,
+.tag-btn a:hover,
+.comment-area .custom-input .btn,
+.contact-box .custom-input .btn,
+.contact_form label.error,
+#scrollUp,
+hr.line {
+    background: #5b974e none repeat scroll 0 0;
+}
+
+
+
+a:focus,
+a:hover,
+.theme-color,
+.slick-slider .prev,
+.slick-slider .next,
+.single-choose .single-list:hover h4,
+.project-menu ul li:hover,
+.project-menu ul li.active,
+.gallery-one .single-project a,
+.project-one .single-project a,
+.testimonial-one .content i,
+.blog-text .comments a:hover,
+.blog-text .title-description h3 a:hover,
+.footer-bottom .left p a,
+.top-contact.right li i,
+.top-contact.right span a:hover,
+.blog-details-area .blog-date a:hover,
+.comment-box .text span a:hover,
+.info-box ul li a:hover,
+.social-icon li a:hover {
+    color: #5b974e;
+}
+
+
+.mainmenu .navigation > li > ul > li {
+    border-top: 1px dashed #5b974e;
+}
+
+.mainmenu .navigation > li > ul > li:hover > a,
+.single-list:hover .icon
+{
+    background-color: #5b974e;
+}
+
+
+.is-sticky .mainmenu .navigation > li > ul {
+    border: 1px dashed #5b974e;
+}
+
+.arrow-box:after,
+.single-list:hover .icon,
+.tag-btn a:hover {
+    border-color: #5b974e;
+}
+
+
+.header-style-one .mainmenu .dropdown li {
+    border-top: 1px solid #5b974e;
+}
+
+
+.is-sticky .mainmenu .navigation > li > ul,
+.top-contact.right li i,
+.testimonial-two .single-slide .content {
+    border: 1px solid #5b974e;
+}
+
+
+.border-shape:before {
+    border-left: 60px solid #5b974e;
+    -webkit-box-shadow: -5px 0 0 -1px #5b974e;
+    box-shadow: -5px 0 0 -1px #5b974e;
+}
+
+.border-shape-right:after {
+    border-right: 60px solid #5b974e;
+    -webkit-box-shadow: 5px 0 0 -1px #5b974e;
+    box-shadow: 5px 0 0 -1px #5b974e;
+}
+
+.contact_form label.error:after {
+    border-color: #5b974e rgba(0, 0, 0, 0) rgba(0, 0, 0, 0);
+}
+
+.about-garden-list {
+    border-left: 2px solid #5b974e;
+}
+
+.single-about-list > img,
+.testimonial-two .heading .img {
+    border: 2px solid #5b974e;
+}
+
+/* Theme color hover */
+.btn:hover {
+    background-color: #3c7b2e;
+}
+
+.header-style-one .header-top li.appo-btn a:hover {
+    background: #3c7b2e;
+}
+.header-style-two .header-top .right a:hover,
+.slider-one .slide-text .btn {
+    background: #3c7b2e none repeat scroll 0 0;
+}
+#scrollUp:hover,
+.style-aylen:after {
+    background: #3C7B2E none repeat scroll 0 0;
+}
+
+.slider-one .bx-wrapper .bx-controls-direction a {
+    border: 4px solid rgba(255, 255, 255, 0.4);
+}
+.bx-wrapper .bx-controls-direction a {
+    background: rgba(71, 151, 78, 0.4) none repeat scroll 0 0;
+}
+.trapezoid {
+    border-bottom: 426px solid rgba(91, 151, 78, 0.79);
+}
+.camera_next > span:hover:after,
+.camera_prev > span:hover:after {
+    background: rgba(91, 151, 78, 0.79);
+}
+
+/* 
+====== Theme Color 1 End ============
+ */
+
+
+
+/* 
+====== Theme Color Overlay ============
+    theme color 91, 151, 78 = #5b974e
+                36, 49, 65 = #243141
+ */
+ .gradient-overlay-1:after {
+    background: -webkit-linear-gradient(right, rgba(91, 151, 78, .9), rgba(36, 49, 65, .9));
+    /* For Safari 5.1 to 6.0 */
+    /* For Opera 11.1 to 12.0 */
+    /* For Firefox 3.6 to 15 */
+    
+    background: -webkit-linear-gradient(left, rgba(91, 151, 78, .9), rgba(36, 49, 65, .9));
+    background: -webkit-gradient(linear, left top, right top, from(rgba(91, 151, 78, .9)), to (rgba(36, 49, 65, .9)));
+    background: -o-linear-gradient(left, rgba(91, 151, 78, .9), rgba(36, 49, 65, .9));
+    background: linear-gradient(to right, rgba(91, 151, 78, .9), rgba(36, 49, 65, .9));
+    /* Standard syntax (must be last) */
+}
+
+ .gradient-overlay-2:after {
+    background: -webkit-linear-gradient(rgba(36, 49, 65, .8), rgba(55, 131, 38, .8));
+    /* For Safari 5.1 to 6.0 */
+    /* For Opera 11.1 to 12.0 */
+    /* For Firefox 3.6 to 15 */
+    
+    background: -webkit-linear-gradient( rgba(36, 49, 65, .8), rgba(55, 131, 38, .8));
+    background: -webkit-gradient( linear, left top, left bottom, from(rgba(36, 49, 65, .8)), to(rgba(55, 131, 38, .8)));
+    background: -o-linear-gradient( rgba(36, 49, 65, .8), rgba(55, 131, 38, .8));
+    background: linear-gradient( rgba(36, 49, 65, .8), rgba(55, 131, 38, .8));
+    /* Standard syntax (must be last) */
+}
+
+ .gradient-overlay-3:after {
+    background: -webkit-linear-gradient(rgba(36, 49, 65, .9), rgba(55, 131, 38, .9));
+    /* For Safari 5.1 to 6.0 */
+    /* For Opera 11.1 to 12.0 */
+    /* For Firefox 3.6 to 15 */
+    
+    background: -webkit-linear-gradient( rgba(36, 49, 65, .9), rgba(55, 131, 38, .9));
+    background: -webkit-gradient( linear, left top, left bottom, from(rgba(36, 49, 65, .9)), to(rgba(55, 131, 38, .9)));
+    background: -o-linear-gradient( rgba(36, 49, 65, .9), rgba(55, 131, 38, .9));
+    background: linear-gradient( rgba(36, 49, 65, .9), rgba(55, 131, 38, .9));
+    /* Standard syntax (must be last) */
+}
+
+ .gradient-overlay-4:after {
+     background: -webkit-linear-gradient(rgba(36, 49, 65, .9), rgba(55, 131, 38, .9));
+     /* For Safari 5.1 to 6.0 */
+     /* For Opera 11.1 to 12.0 */
+     /* For Firefox 3.6 to 15 */
+     
+     background: -webkit-linear-gradient( rgba(0, 0, 0, .8), rgba(32, 104, 17, .8));
+     background: -webkit-gradient( linear, left top, left bottom, from(rgba(0, 0, 0, .8)), to(rgba(32, 104, 17, .8)));
+     background: -o-linear-gradient( rgba(0, 0, 0, .8), rgba(32, 104, 17, .8));
+     background: linear-gradient( rgba(0, 0, 0, .8), rgba(32, 104, 17, .8));
+     /* Standard syntax (must be last) */
+ }
+
+ /* others color overlay 
+ =================================*/
+
+ .overlay-1:after {
+     background: rgba(91, 151, 78, .95) none repeat scroll 0 0;
+ }
+ .overlay-2:after {
+     background: rgba(91, 151, 78, .70) none repeat scroll 0 0;
+ }
+ .overlay-3:after {
+     background: rgba(36, 49, 65, 0.95) none repeat scroll 0 0;
+ }
+ .overlay-4:after {
+     background: rgba(36, 49, 65, 0.90) none repeat scroll 0 0;
+ }
+ .overlay-5:after {
+     background: rgba(36, 49, 65, 0.80) none repeat scroll 0 0;
+ }
+.service-two .slick-current .single-slide .text {
+    background: rgba(91, 151, 78, 0.95) none repeat scroll 0 0;
+}
+.project-two .single-project .title {
+    background: rgba(91, 151, 78, 0.95) none repeat scroll 0 0;
+}
+.project-two .title .zoom-icon a:hover {
+    background: #50844c none repeat scroll 0 0;
+}
+.service-page .single-item:hover .text {
+    background: rgba(91, 151, 78, 0.95) none repeat scroll 0 0;
+}
+.comment-area .custom-input button:hover,
+.contact-page .custom-input .btn:hover {
+    background: #397d2b none repeat scroll 0 0;
+}
+
+
+
+
+
+
+
+
+
